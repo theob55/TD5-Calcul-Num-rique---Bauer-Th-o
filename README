@@ -1,3 +1,11 @@
+# T. Bauer
+
+Run the code with
+docker build -f docker/Dockerfile --progress=plain -t tp-cn:latest .
+docker run -it tp-cn:latest
+make run
+
+
 ##########################################################
 # README
 #
