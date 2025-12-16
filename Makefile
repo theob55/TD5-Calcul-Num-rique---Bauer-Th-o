@@ -25,6 +25,7 @@ OPTC=${OPTCLOCAL}
 # -- Directories
 TPDIR=.
 TPDIRSRC=$(TPDIR)/src
+TPDIRTEST=$(TPDIR)/test
 
 #
 # -- librairies
@@ -40,7 +41,7 @@ INCL= -I $(TPDIR)/include $(INCLATLAS)
 ############
 #
 SOL?=
-OBJENV= tp_env.o
+OBJENV=$(OBJLIBPOISSON) tp_env.o
 OBJLIBPOISSON= lib_poisson1D$(SOL).o lib_poisson1D_writers.o lib_poisson1D_richardson$(SOL).o
 OBJTP2ITER= $(OBJLIBPOISSON) tp_poisson1D_iter.o
 OBJTP2DIRECT= $(OBJLIBPOISSON) tp_poisson1D_direct.o
