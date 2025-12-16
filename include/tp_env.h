@@ -10,3 +10,4 @@
 #include <values.h>
 #include <limits.h>
 #include "atlas_headers.h"
+#include <lib_poisson1D.h>
