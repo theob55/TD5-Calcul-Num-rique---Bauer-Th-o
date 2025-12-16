@@ -50,6 +50,7 @@ int main(int argc,char *argv[])
   NRHS=1;           /* Single right-hand side */
   nbpoints=12;      /* Total discretization points */
   la=nbpoints-2;    /* Interior points only */
+  double h = 1.0/(nbpoints-1);
 
   /* Dirichlet Boundary conditions */
   T0=5.0;           /* Left boundary value */

@@ -73,6 +73,7 @@ int main(int argc,char *argv[])
   ku=1;             /* Number of superdiagonals in original matrix */
   kl=1;             /* Number of subdiagonals */
   lab=kv+kl+ku+1;   /* Leading dimension of band storage */
+  double h = 1.0/(nbpoints-1);
 
   /* Allocate and initialize the coefficient matrix */
   AB = (double *) malloc(sizeof(double)*lab*la);
@@ -107,6 +108,7 @@ int main(int argc,char *argv[])
   /* Alternative: solve directly using dgbsv */
   if (IMPLEM == SV) {
     // TODO : use dgbsv
+    dgbsv_(&la, &kl, &ku, &NRHS, AB, &lab, ipiv, RHS, &la, &info);
   }
 
   /* Write results to files */
